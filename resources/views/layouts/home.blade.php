@@ -8,7 +8,11 @@
     <title>@yield('title')</title>
     <link rel="shortcut icon" href="{{ asset('img/icono.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!--   
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+-->    
 </head>
 
 <body>
@@ -35,7 +39,7 @@
             <div class="item">
                 <a href="#">
                     <div class="icon"><img src="./Img/cooperacion.svg" alt=""></div>
-                    <div class="title"><span> services</span></div>
+                    <div class="title"><span> Mi perfil</span></div>
                 </a>
             </div>
 
@@ -44,7 +48,7 @@
             <div class="item">
                 <a href="#">
                     <div class="icon"><img src="./Img/cooperacion.svg" alt=""></div>
-                    <div class="title"><span>cloud services</span></div>
+                    <div class="title"><span>Mis Objetos</span></div>
                 </a>
             </div>
 
