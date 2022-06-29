@@ -24,14 +24,14 @@ $table->integer('votes');
 
             $table->id();
 
-            $table->unsignedBigInteger('role'); // llave foranea
+            $table->unsignedBigInteger('role')->default(2); // llave foranea
             $table->foreign('role')->references('id')->on('users_roles'); // definicion de foranea
 
-            $table->integer('document');
+            $table->integer('document')->unique();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password'); 
-            $table->boolean('state')->default(TRUE);;
+            $table->boolean('state')->default(TRUE);
             $table->timestamps();
         });
     }

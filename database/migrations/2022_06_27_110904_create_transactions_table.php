@@ -26,7 +26,7 @@ return new class extends Migration
             $table->unsignedBigInteger('state'); // llave foranea 
             $table->foreign('state')->references('id')->on('transactions_states'); // definicion de foranea 
 
-            $table->unsignedBigInteger('objects_users'); // id del objeto
+            $table->unsignedBigInteger('object_users'); // id del objeto
         });
     }
 

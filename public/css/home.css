@@ -1,8 +1,8 @@
 :root {
     --width: 200px;
     --padding: 10px;
-    --bgcolor: rgb(52, 52, 52);
-    --hovercolor: rgb(23, 23, 23);
+    --bgcolor: #A01BC4;
+    --hovercolor: #39065A;
     --width-collapsed: 50px;
 }
 
@@ -22,9 +22,12 @@ body {
 }
 
 #main-container {
+    width: 100%;
     text-align: center;
     color: #000;
     position: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     margin: 10px;
 

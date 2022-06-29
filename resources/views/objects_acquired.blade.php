@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title', 'Home')
+@section('title', 'Perfil')
 
 @section('css')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
@@ -12,10 +12,6 @@
 {{auth()->user()->name}}
 @endsection
 
-@section('profile_user')
-
-@endsection
-
 @section('content')
 
 <h1>Lista de objetos Disponibles</h1>
@@ -25,22 +21,24 @@
             <table id="objetos" class="table table-striped">
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Dueño</th>
                         <th>Estado</th>
-                        <th>Tipo</th>
+                        <th>Acticcion</th>
                         <th>Nombre</th>
                         <th>Imagen</th>
                         <th>Descripcion</th>
-                        <th>Acción</th>
+                        <th></th>
                     </tr>
                 </thead>
                
                 <tbody>
                     @foreach ($objects as $object)
                     <tr>
-                        <td>{{$object->innerjoin_user->name}}</td>
-                        <td>{{$object->innerjoin_state->object_state}}</td>
-                        <td>{{$object->innerjoin_action->action}}</td>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>{{$object->owner}}</td>
+                        <td>{{$object->state}}</td>
+                        <td>{{$object->action}}</td>
                         <td>{{$object->name_object}}</td>
                         <td>{{$object->image}}</td>
                         <td>{{$object->description}}</td>
@@ -74,14 +72,9 @@
             "language": {
                 "lengthMenu": "Mostrar _MENU_ registros por página",
                 "zeroRecords": "No se encontró registro",
-                "info": "Mostrando la página _PAGE_ de _PAGES_",
-                "infoEmpty": "No hay registros disponibles",
-                "infoFiltered": "(Filtro de _MAX_ registros totales)",
-                "search": "Buscar:",
-                "paginate":{
-                    "next":"Siguiente",
-                    "previous":"Anterior"
-                }
+                "info": "Showing page _PAGE_ of _PAGES_",
+                "infoEmpty": "No records available",
+                "infoFiltered": "(filtered from _MAX_ total records)"
             }
 
         });

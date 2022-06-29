@@ -23,7 +23,7 @@
     <div id="sidemenu" class="menu-collapsed">
         <!--HEADER-->
         <div id="header">
-            <div id="title"><span>Perfil</span></div>
+            <div id="title"><span>Menú</span></div>
             <div id="menu-btn">
                 <div class="img-menu" id="photo"><img src="{{ asset('img/menu.svg') }}" alt=""></div>
             </div>
@@ -36,10 +36,22 @@
         </div>
 
         <!--ITEMS-->
-        <div id="menu-items">
+
+        
+    <div id="menu-items">
+
             <div class="item">
-                <a href="#">
-                    <div class="icon"><img src="{{ asset('img/cooperacion.svg') }}" alt=""></div>
+                <a href="{{route('home.user')}}">
+                    <div class="icon"><img src="{{ asset('img/Home.svg') }}" alt=""></div>
+                    <div class="title"><span>Inicio</span></div>
+                </a>
+            </div>
+
+        <div class="item separator"></div>
+        
+            <div class="item">
+                <a href="{{route('profile.user')}}">
+                    <div class="icon"><img src="{{ asset('img/Programador.svg') }}" alt=""></div>
                     <div class="title"><span> Mi perfil</span></div>
                 </a>
             </div>
@@ -47,9 +59,27 @@
             <div class="item separator"></div>
 
             <div class="item">
-                <a href="#">
-                    <div class="icon"><img src="{{ asset('img/cooperacion.svg') }}" alt=""></div>
+                <a href="{{route('object.user')}}">
+                    <div class="icon"><img src="{{ asset('img/Object_acquired.svg') }}" alt=""></div>
                     <div class="title"><span>Mis Objetos</span></div>
+                </a>
+            </div>
+
+            <div class="item separator"></div>
+
+            <div class="item">
+                <a href="{{route('object.user')}}">
+                    <div class="icon"><img src="{{ asset('img/User_object.svg') }}" alt=""></div>
+                    <div class="title"><span>Objetos Adquiridos</span></div>
+                </a>
+            </div>
+
+            <div class="item separator"></div>
+
+            <div class="item">
+                <a href="{{route('destroy.user')}}">
+                    <div class="icon"><img src="{{ asset('img/Log_out.svg') }}" alt=""></div>
+                    <div class="title"><span>Cerrar sesión</span></div>
                 </a>
             </div>
 

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('owner'); // llave foranea de usuarios
             $table->foreign('owner')->references('id')->on('users'); // definicion de foranea de usuarios
 
-            $table->unsignedBigInteger('state'); // llave foranea de estados
+            $table->unsignedBigInteger('state')->default(1); // llave foranea de estados
             $table->foreign('state')->references('id')->on('objects_states'); // definicion de foranea de estados
 
             $table->unsignedBigInteger('action'); // llave foranea de accion (se compra o se vende)

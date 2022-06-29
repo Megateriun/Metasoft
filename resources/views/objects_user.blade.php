@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title', 'Home')
+@section('title', 'Perfil')
 
 @section('css')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
@@ -12,42 +12,37 @@
 {{auth()->user()->name}}
 @endsection
 
-@section('profile_user')
-
-@endsection
-
 @section('content')
 
-<h1>Lista de objetos Disponibles</h1>
+<h1>Mi lista de objetos</h1>
 
     <div class="card">
         <div class="card-body">
             <table id="objetos" class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Dueño</th>
+                        <th>#</th>
+
                         <th>Estado</th>
-                        <th>Tipo</th>
+                        <th>Acticcion</th>
                         <th>Nombre</th>
                         <th>Imagen</th>
                         <th>Descripcion</th>
-                        <th>Acción</th>
+
                     </tr>
                 </thead>
                
                 <tbody>
                     @foreach ($objects as $object)
                     <tr>
-                        <td>{{$object->innerjoin_user->name}}</td>
+                        <td><input type="checkbox" name="" id=""></td>
+
                         <td>{{$object->innerjoin_state->object_state}}</td>
                         <td>{{$object->innerjoin_action->action}}</td>
                         <td>{{$object->name_object}}</td>
                         <td>{{$object->image}}</td>
                         <td>{{$object->description}}</td>
-                        <td>
-                            <button>Reservar</button>
-                            <button>Comprar</button>
-                        </td>
+
                     </tr>
                     @endforeach
                 </tbody>
@@ -56,6 +51,10 @@
 
         </div>
     </div>
+<form action="{{route('object.create')}}">
+    <button  >Agregar un nuevo objeto</button>
+</form>
+    
 
 @endsection
 
@@ -74,14 +73,9 @@
             "language": {
                 "lengthMenu": "Mostrar _MENU_ registros por página",
                 "zeroRecords": "No se encontró registro",
-                "info": "Mostrando la página _PAGE_ de _PAGES_",
-                "infoEmpty": "No hay registros disponibles",
-                "infoFiltered": "(Filtro de _MAX_ registros totales)",
-                "search": "Buscar:",
-                "paginate":{
-                    "next":"Siguiente",
-                    "previous":"Anterior"
-                }
+                "info": "Showing page _PAGE_ of _PAGES_",
+                "infoEmpty": "No records available",
+                "infoFiltered": "(filtered from _MAX_ total records)"
             }
 
         });

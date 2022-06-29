@@ -26,12 +26,12 @@
          <input class="input-text" type="text" placeholder="Nombre Completo" name="name">   
          </div>
 
-         <div class="input-contenedor">      
-         <input class="input-text" type="text" placeholder="Documento" name="document">        
-         </div>
-
          <div class="input-contenedor">        
          <input class="input-text" type="text" placeholder="Correo personal" name="email">       
+         </div>
+
+         <div class="input-contenedor">      
+         <input class="input-text" type="text" placeholder="Documento" name="document">        
          </div>
 
  <!--

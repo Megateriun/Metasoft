@@ -20,6 +20,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'document',
         'name',
         'email',
         'password',
@@ -60,6 +61,7 @@ class User extends Authenticatable
             set: fn ($value) => strtolower($value)
         );
     }
+
 /*
 // gracias a lo de arribe se ahorra esto
 

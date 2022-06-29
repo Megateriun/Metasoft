@@ -21,8 +21,8 @@ class UserFactory extends Factory
         // Este archivo crea usuario aleatoriamente, es importante que sea el nombre del modelo seguido de "Factory" o no va a funcionar
 
         return [
-            'role' => 2,
-            'document' => $this->faker->randomNumber(9),
+            //'role' => 2,
+            'document' => $this->faker->unique()->randomNumber(9),
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi' // password
