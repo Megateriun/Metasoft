@@ -18,7 +18,7 @@
 
 <body>
     <!--BANER-->
-    <h1 style="text-align: center; background-color: #A01BC4; margin: 0px; padding: 20px; color: #FFF">Metasoft</h1>
+    <h1 style="text-align: center; background-color: #62008f; margin: 0px; padding: 20px; color: #FFF">Metasoft</h1>
 <div id="container">
     <div id="sidemenu" class="menu-collapsed">
         <!--HEADER-->

@@ -1,7 +1,7 @@
 :root {
     --width: 200px;
     --padding: 10px;
-    --bgcolor: #A01BC4;
+    --bgcolor: 	#62008f;
     --hovercolor: #39065A;
     --width-collapsed: 50px;
 }
@@ -250,7 +250,7 @@ footer{
 
 .content-foo h4{
     color: #fff;
-    border-bottom: 3px solid #af20d3;
+    border-bottom: 3px solid 	#62008f;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
