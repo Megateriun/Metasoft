@@ -86,16 +86,16 @@
     <footer id="footer">
         <div class="contenedor-footer">
             <div class="content-foo">
-                <h4>Phone</h4>
-                <p>8296312</p>
+                <h4>Telefono</h4>
+                <p>No disponible por ahora</p>
             </div>
             <div class="content-foo">
                 <h4>Email</h4>
-                <p>8296312</p>
+                <p>No disponible por ahora</p>
             </div>
             <div class="content-foo">
-                <h4>Location</h4>
-                <p>8296312</p>
+                <h4>Ubicacion</h4>
+                <p>No disponible por ahora</p>
             </div>
         </div>
         <h2 class="titulo-final">&copy; Metasoft | Sofware de intercambios y ventas</h2>
