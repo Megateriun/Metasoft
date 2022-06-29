@@ -22,7 +22,7 @@
         </nav>
         <section class="textos-header">
             <h1>Metasoft</h1>
-            <h2>Página web de cambio y venta de objetos</h2>
+            <h2>Página web de cambio y venta de objetos.</h2>
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;">
             <!--esto ayuda hacer la forma undulada -->
