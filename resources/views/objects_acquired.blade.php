@@ -24,11 +24,7 @@
                         <th>#</th>
                         <th>Dueño</th>
                         <th>Estado</th>
-                        <th>Acticcion</th>
-                        <th>Nombre</th>
-                        <th>Imagen</th>
-                        <th>Descripcion</th>
-                        <th></th>
+                        <th>Id objeto</th>
                     </tr>
                 </thead>
                
@@ -38,14 +34,7 @@
                         <td><input type="checkbox" name="" id=""></td>
                         <td>{{$object->owner}}</td>
                         <td>{{$object->state}}</td>
-                        <td>{{$object->action}}</td>
-                        <td>{{$object->name_object}}</td>
-                        <td>{{$object->image}}</td>
-                        <td>{{$object->description}}</td>
-                        <td>
-                            <button>Reservar</button>
-                            <button>Comprar</button>
-                        </td>
+                        <td>{{$object->object_users}}</td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -72,9 +61,14 @@
             "language": {
                 "lengthMenu": "Mostrar _MENU_ registros por página",
                 "zeroRecords": "No se encontró registro",
-                "info": "Showing page _PAGE_ of _PAGES_",
-                "infoEmpty": "No records available",
-                "infoFiltered": "(filtered from _MAX_ total records)"
+                "info": "Mostrando la página _PAGE_ de _PAGES_",
+                "infoEmpty": "No hay registros disponibles",
+                "infoFiltered": "(Filtro de _MAX_ registros totales)",
+                "search": "Buscar:",
+                "paginate":{
+                    "next":"Siguiente",
+                    "previous":"Anterior"
+                }
             }
 
         });

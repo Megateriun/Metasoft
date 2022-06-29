@@ -1,0 +1,20 @@
+                            
+<link rel="stylesheet" href="{{ asset('css/button.css') }}">              
+                            
+                            
+                            
+                            
+                            
+                            <div class="button_x">
+                                <a href="{{ route('reserve.button',$object) }}" @method(put)>
+                                    <div class="icon"><img src="{{ asset('img/Log_out.svg') }}" alt=""></div>
+                                    <div class="title"><span>Reservar</span></div>
+                                </a>
+                            </div>
+
+                            <div class="button_x">
+                                <a href="{{route('accept.button',$object)}}">
+                                    <div class="icon"><img src="{{ asset('img/Log_out.svg') }}" alt=""></div>
+                                    <div class="title"><span>Aceptar</span></div>
+                                </a>
+                            </div>

@@ -1,0 +1,45 @@
+:root {
+    --width_button: 70px;
+    --width_icon: 50px;
+    --padding_button: 5px;
+    --hovercolor_button: #39065A;
+    --width-collapsed: 50px;
+}
+
+
+.button_x { 
+    width: var(--width_button);
+}
+
+.button_x .icon {
+    padding: var(--padding_button);
+    display: inline-block;
+}
+
+.button_x .icon,
+.button_x .title {
+    font-size: 15px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.button_x a {
+    display: block;
+}
+
+.button_x a:hover {
+    background-color: var(--hovercolor_button);
+}
+
+.button_x .icon {
+    box-sizing: border-box;
+    
+    width: var(--width_icon);
+}
+
+.button_x .icon img {
+    display: block;
+ margin: 0px auto;
+    width: 100%;
+}

@@ -14,7 +14,7 @@
 
 <div class="contenedor">
 
-    <form class="formulario" action="{{route('object.store')}}" method="POST">   <!-- al colocar POST en el metodo apunta a la url de /form que tenga el metodo post -->
+    <form class="formulario" action="{{route('object.save')}}" method="POST">   <!-- al colocar POST en el metodo apunta a la url de /form que tenga el metodo post -->
 
        @csrf <!-- esto es un toque(lo hace laravel para que terceros no ingresen a los formularios) que solucita laravel para enviar el formulario por el metodo post  -->
 

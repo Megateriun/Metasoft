@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap4.min.css">
+
 @endsection
 
 @section('name_user')
@@ -37,6 +38,8 @@
                
                 <tbody>
                     @foreach ($objects as $object)
+
+
                     <tr>
                         <td>{{$object->innerjoin_user->name}}</td>
                         <td>{{$object->innerjoin_state->object_state}}</td>
@@ -45,8 +48,19 @@
                         <td>{{$object->image}}</td>
                         <td>{{$object->description}}</td>
                         <td>
+<!---->
+                        <form action="{{ route('accept.button',$object) }}" method="post">
+                            @csrf
+                            @method('put')
+                            <button>Aceptar</button>
+                        </form>
+
+                        <form action="{{ route('reserve.button',$object) }}" method="post">
+                            @csrf
+                            @method('put')
                             <button>Reservar</button>
-                            <button>Comprar</button>
+                        </form>
+
                         </td>
                     </tr>
                     @endforeach

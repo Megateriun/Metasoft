@@ -28,6 +28,7 @@
                         <th>Nombre</th>
                         <th>Imagen</th>
                         <th>Descripcion</th>
+                        <th></th>
 
                     </tr>
                 </thead>
@@ -42,6 +43,10 @@
                         <td>{{$object->name_object}}</td>
                         <td>{{$object->image}}</td>
                         <td>{{$object->description}}</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
 
                     </tr>
                     @endforeach
@@ -73,9 +78,14 @@
             "language": {
                 "lengthMenu": "Mostrar _MENU_ registros por página",
                 "zeroRecords": "No se encontró registro",
-                "info": "Showing page _PAGE_ of _PAGES_",
-                "infoEmpty": "No records available",
-                "infoFiltered": "(filtered from _MAX_ total records)"
+                "info": "Mostrando la página _PAGE_ de _PAGES_",
+                "infoEmpty": "No hay registros disponibles",
+                "infoFiltered": "(Filtro de _MAX_ registros totales)",
+                "search": "Buscar:",
+                "paginate":{
+                    "next":"Siguiente",
+                    "previous":"Anterior"
+                }
             }
 
         });

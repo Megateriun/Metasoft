@@ -25,7 +25,7 @@ class LoginController extends Controller
             return redirect()->route('home.user');
         }
 
-        return 'Failure';
+        return 'Correo o contraseña incorrecta';
     }
 
     public function destroy()

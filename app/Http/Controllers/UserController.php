@@ -21,8 +21,8 @@ class UserController extends Controller
 
     public function acquired()
     {
-        $objects = Transaction::where("client","=",auth()->user()->id)->select('owner','state','object_users')->get(); // esto consulta y manda todos los registros de la base de datos
-        return view('objects_user', compact('objects'));
+        $objects = Transaction::where("client","=",auth()->user()->id)->get(); // esto consulta y manda todos los registros de la base de datos
+        return view('objects_acquired', compact('objects'));
     }
 
 }

@@ -68,7 +68,7 @@
             <div class="item separator"></div>
 
             <div class="item">
-                <a href="{{route('object.user')}}">
+                <a href="{{route('acquired.user')}}">
                     <div class="icon"><img src="{{ asset('img/User_object.svg') }}" alt=""></div>
                     <div class="title"><span>Objetos Adquiridos</span></div>
                 </a>

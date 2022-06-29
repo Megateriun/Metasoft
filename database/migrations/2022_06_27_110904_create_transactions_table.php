@@ -27,6 +27,7 @@ return new class extends Migration
             $table->foreign('state')->references('id')->on('transactions_states'); // definicion de foranea 
 
             $table->unsignedBigInteger('object_users'); // id del objeto
+            $table->timestamps(); 
         });
     }
 

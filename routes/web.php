@@ -30,11 +30,19 @@ los segundos '' es la funcion que enruta a la vista y el tercer
 
 */
 
+/*
+METODOS:
+post: enviar datos de manera oculta
+get: enviar datos por la ruta
+put: para actualizar datos
+*/
+
 Route::controller(HomeController::class)->group(function(){
 
 Route::get('/','index')->name('index');
 Route::get('/home','home')->name('home.user'); // Vista caundo se inicia sesion
-
+Route::put('/home/accept/{object}','button_accept')->name('accept.button'); // funcionalidad dde boton aceptar
+Route::put('/home/reserve/{object}','button_reserve')->name('reserve.button'); // funcionalidad dde boton reservar
    
 });
 
@@ -53,5 +61,5 @@ Route::get('/profile/object', 'object')->name('object.user');
 Route::get('/profile/object/acquired', 'acquired')->name('acquired.user');
 });
 
-Route::get('/object', [App\Http\Controllers\ObjectController::class, 'object'])->name('object.create');
-Route::post('/object', [App\Http\Controllers\ObjectController::class, 'store'])->name('object.store');
+Route::get('/object/create', [App\Http\Controllers\ObjectController::class, 'create_objects'])->name('object.create');//este direccion esta en el boton para crer un objeto
+Route::post('/object/create/save', [App\Http\Controllers\ObjectController::class, 'save_objects'])->name('object.save');
