@@ -26,7 +26,7 @@ class FormController extends Controller
         //return $user;
         if ($request->password == $request->password_check) {
             $user->save();
-            return redirect()->route('profile.user',$user);// se manda a la pagina del perfil y se manda el usuario
+            return redirect()->route('profile.user',$user->id);// se manda a la pagina del perfil y se manda el usuario
         }else{
             return redirect()->route('form');
         }

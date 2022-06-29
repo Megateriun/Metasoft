@@ -15,11 +15,19 @@ body {
     
 }
 
+#container {
+    display: flex;
+    align-items: flex-start;
+
+}
+
 #main-container {
-    
+    text-align: center;
     color: #000;
-    position: fixed;
-    top: 100px;
+    position: flex;
+    top: 0;
+    margin: 10px;
+
 }
 
 #sidemenu {
@@ -31,7 +39,6 @@ body {
     color: white;
     position: sticky;
     top: 0px;
-    height: 100%;
     left: 0;
     
 }
@@ -166,10 +173,6 @@ ITEM
 estos son los atributos cuando el menu esra expandido
 */
 
-.main-container-expanded {
-    margin-left: var(--width);
-}
-
 .menu-expanded{
     width: var(--width);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -194,10 +197,6 @@ estos son los atributos cuando el menu esra expandido
 /*
 esta parte hace que el menu sea pequeño
 */
-
-.main-container-collapsed {
-    margin-left: var(--width-collapsed);
-}
 
 .menu-collapsed #profile #name{
     width: 100px;

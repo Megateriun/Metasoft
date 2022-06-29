@@ -38,7 +38,7 @@ Route::get('/','index')->name('index');
 
 Route::get('/login', [App\Http\Controllers\LoginController::class, 'login'])->name('login'); // lo que esta en el name es el nombre de la ruta que se va a usar en los archivos
 
-Route::get('/profile', [App\Http\Controllers\UserController::class, 'profile'])->name('profile.user'); // Vista del perfil del usuario
+Route::get('/profile/{id}', [App\Http\Controllers\UserController::class, 'profile'])->name('profile.user'); // Vista del perfil del usuario
 
 Route::get('/form', [App\Http\Controllers\FormController::class, 'form'])->name('form'); // Vista del formulario
 Route::post('/form', [App\Http\Controllers\FormController::class, 'store'])->name('form.store'); // para recolectar los datos del formulario
