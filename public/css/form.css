@@ -19,7 +19,7 @@ body {
 .formulario{
     background: #FFF;
     padding: 3px;
-    border: 3px solid #A01BC4;
+    border: 3px solid 	#62008f;
 }
 
 h1{
@@ -48,7 +48,7 @@ input[type="password"]{
     margin-left: 10%;
     color: white;
     font-size: 20px;
-    background:  #A01BC4;
+    background:  #62008f;
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;

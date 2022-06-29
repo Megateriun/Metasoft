@@ -12,7 +12,7 @@
 </head>  
 <body ng-controller="Registrar">
     <!--  -->
-<h1 style="background-color: #A01BC4; margin: 0px; padding: 20px; color: #FFF"><a style="color: #FFF" class="link" href="{{route('index')}}"> Metasoft</a></h1>
+<h1 style="background-color: #62008f; margin: 0px; padding: 20px; color: #FFF"><a style="color: #FFF" class="link" href="{{route('index')}}"> Metasoft</a></h1>
 
 <div class="contenedor">
 
