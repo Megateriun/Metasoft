@@ -39,14 +39,12 @@
             <div class="contenedor-sobre-nosotros">
                 <img src="{{ asset('img/ilustracion2.svg') }}" alt="" class="imagen-about-us">
                 <div class="contenido-textos">
-                    <h3><span>1</span>Los mejores productos</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-                        consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-                        velit doloribus laboriosam ut.</p>
-                    <h3><span>2</span>Los mejores productos</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-                        consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-                        velit doloribus laboriosam ut.</p>
+                    <h3><span>1</span>Cambio y venta de objetos</h3>
+                    <p>En nuestra plataforma podrás realizar el intercambio y la venta de esos objetos que tienes y no estás utilizando en el momento.</p>
+                    <h3><span>2</span>Gestiona propio inventario</h3>
+                    <p>Ofrecemos una solución integral acompañada de una plataforma que cualquier usuario pueda prestar o vender objetos de forma sencilla.</p>
+                    <h3><span>3</span>Todo en unos pocos clics</h3>
+                    <p>Acompañado de una interfaz sencilla y amigable con el usuario, en unos pocos segundos usted podrá prestar objetos.</p>
                 </div>
             </div>
         </section>
@@ -58,17 +56,17 @@
                     <div class="servicio-ind">
                         <img src="{{ asset('img/ilustracion1.svg') }}" alt="">
                         <h3>Publica los objetos que quieras</h3>
-                        <p>Podras agregar productos que quieras prestar o vender</p>
+                        <p>Gestiona tu inventario de forma autonoma.</p>
                     </div>
                     <div class="servicio-ind">
                         <img src="{{ asset('img/ilustracion4.svg') }}" alt="">
                         <h3>Facil contacto</h3>
-                        <p>La persona que esté interesado en tu producto te contactara o te hara un propuesta para llegar a un acuerdo</p>
+                        <p>La persona que esté interesado en tu producto te contactará o te hará un propuesta para llegar a un acuerdo</p>
                     </div>
                     <div class="servicio-ind">
                         <img src="{{ asset('img/ilustracion3.svg') }}" alt="">
                         <h3>Compras y ventas de manera sencilla</h3>
-                        <p>Al final todo se reducie en un combenio con la otra persona</p>
+                        <p>Tan sencillo como un trato directo con la otra persona</p>
                     </div>
                 </div>
             </div>
