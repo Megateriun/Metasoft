@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Registro</title>
+    <link rel="shortcut icon" href="{{ asset('img/icono.png') }}" type="image/x-icon">
     <link href="{{ asset('css/form.css') }}" rel="stylesheet" type="text/css">
     
 <!--
@@ -23,30 +24,52 @@
      <h1>Registrate</h1>
 
          <div class="input-contenedor">
-         <input class="input-text" type="text" placeholder="Nombre Completo" name="name">   
+         <input class="input-text" type="text" placeholder="Nombre Completo" name="name" id="name" value="{{ old('name') }}">   
          </div>
+
+         @error('name')<p> {{$message}} </p>@enderror
 
          <div class="input-contenedor">        
-         <input class="input-text" type="text" placeholder="Correo personal" name="email">       
+         <input class="input-text" type="text" placeholder="Correo personal" name="email" value="{{old('email')}}">       
          </div>
+
+         @if (session('error_correo'))
+         <div class="">
+            <p style="color: red"> {{session('error_correo')}} </p>
+         </div>
+         @endif
+
+         @error('email')<p> {{$message}} </p>@enderror
 
          <div class="input-contenedor">      
-         <input class="input-text" type="text" placeholder="Documento" name="document">        
+         <input class="input-text" type="text" placeholder="Documento" name="document" value="{{old('document')}}">        
          </div>
 
- <!--
-         <div class="input-contenedor"  ng-init="Ver_sedes()">  
-         <select name="sede" ng-options = "sede.coddep as sede.desdep for sede in sedes" ></select>
-       
+         @if (session('error_documento'))
+         <div class="">
+            <p style="color: red"> {{session('error_documento')}} </p>
          </div>
--->
+         @endif
+
+         @error('document')<p> {{$message}} </p>@enderror
+
          <div class="input-contenedor">      
          <input class="input-text" type="password" placeholder="Contraseña" name="password">        
          </div>
 
+         @error('password')<p> {{$message}} </p>@enderror
+
          <div class="input-contenedor">      
          <input class="input-text" type="password" placeholder="Verificar Contraseña" name="password_check">        
          </div>
+
+         @error('password_check')<p> {{$message}} </p>@enderror
+
+         @if (session('error'))
+         <div class="">
+            <p style="color: red"> {{session('error')}} </p>
+         </div>
+         @endif
                  
          <button class="button" type="submit" >Registrate</button>
 

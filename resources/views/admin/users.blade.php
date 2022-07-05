@@ -1,11 +1,13 @@
-@extends('layouts.home_layout')
+@extends('layouts.admin_home_layout')
 
-@section('title', 'Perfil')
+@section('title', 'Usuarios')
 
 @section('css')
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap4.min.css">
+
 @endsection
 
 @section('name_user')
@@ -14,29 +16,48 @@
 
 @section('content')
 
-<h1>Lista de objetos Adquiridos</h1>
+<h1>Lista de USUARIOS</h1>
 
     <div class="card">
         <div class="card-body">
             <table id="objetos" class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Dueño</th>
+                        <th>ID</th>
+                        <th>Rol</th>
+                        <th>Documento</th>
+                        <th>Nombre</th>
+                        <th>Foto</th>
+                        <th>Correo</th>
                         <th>Estado</th>
-                        <th>Nombre objeto</th>
-                        <th>Imagen</th>
-                        <th>Descripción</th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
                
                 <tbody>
-                    @foreach ($transactions as $transaction)
+                    @foreach ($users as $user)
                     <tr>
-                        <td>{{$transaction->innerjoin_user->name}}</td>
-                        <td>{{$transaction->innerjoin_state_transaction->transaction_state}}</td>
-                        <td>{{$objects->find($transaction->object_users)->name_object}}</td>
-                        <td><img style="width: 100px" src="{{ asset('img/defaull/object.svg') }}" alt=""></td>
-                        <td>{{$objects->find($transaction->object_users)->description}}</td>
+                        <td>{{$user->id}}</td>
+                        <td>{{$user->innerjoin_role->role}}</td>
+                        <td>{{$user->document}}</td>
+                        <td>{{$user->name}}</td>
+                        <td><img style="width: 100px" src="{{ asset('img/defaull/object.svg') }}" alt=""> </td>
+                        <td>{{$user->email}}</td>
+
+                        @if ($user->state)
+                            <td>Activo</td>
+                        @else
+                            <td>Bloqueado</td>
+                        @endif
+  
+                        <td>
+                        <form  method="post">
+                            @csrf
+                            @method('put')
+                            <button>Editar</button>
+                        </form>
+                        </td>
+
                     </tr>
                     @endforeach
                 </tbody>
@@ -45,6 +66,7 @@
 
         </div>
     </div>
+
 
 @endsection
 

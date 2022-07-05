@@ -36,13 +36,14 @@ class DatabaseSeeder extends Seeder
         $user->role = 1;
         $user->document = 123456789;
         $user->name = "Stiven Cruz";
+        $user->image = null;
         $user->email = "stiven@gmail.com";
-        $user->password = "123456";
+        $user->password = bcrypt("123456");
 
         $user->save();
 
-        User::factory(10)->create(); // aqui se escribe la cantidad de datos random de usuario
-        Objects_user::factory(10)->create(); // aqui se escribe la cantidad de objetos random
+        User::factory(100)->create(); // aqui se escribe la cantidad de datos random de usuario
+        Objects_user::factory(100)->create(); // aqui se escribe la cantidad de objetos random
         //Transaction::factory(10)->create();
     }
 }

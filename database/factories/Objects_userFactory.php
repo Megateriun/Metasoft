@@ -17,12 +17,12 @@ class Objects_userFactory extends Factory
     public function definition()
     {
         return [
-            'owner'  => $this->faker->unique()->numberBetween(1, 10), // se debe de tener en cuenta la cantidad de usuarios y los objetos que se quiera crear
-            'state'  => $this->faker->randomElement([1,2,3,4]),
+            'owner'  => $this->faker->numberBetween(1, 100), // se debe de tener en cuenta la cantidad de usuarios y los objetos que se quiera crear
+            'state'  => 1,
             'action'  => $this->faker->randomElement([1,2,3]),
             'name_object' => $this->faker->name(),
             'description' => $this->faker->paragraph(),
-            'image' => $this->faker->name()
+            'image' => null
         ];
     }
 }

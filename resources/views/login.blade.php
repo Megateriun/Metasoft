@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title> 
+    <link rel="shortcut icon" href="{{ asset('img/icono.png') }}" type="image/x-icon">
 	<link href="{{ asset('css/form.css') }}" rel="stylesheet" type="text/css">
 </head>  
 <body>
@@ -16,16 +17,22 @@
         @csrf <!-- Para no tener errores, dejar este token en el form -->
 
          <div class="input-contenedor">
-         <input class="input-text" type="text" name="email">
-         </div>
-         
-         <div class="input-contenedor">
-         <input class="input-text" type="password" name="password">
+         <input placeholder="Correo" class="input-text" type="text" name="correo" value="{{old('correo')}}">
          </div>
 
-@error('message')
-    <p>error</p>
-@enderror
+         @error('correo')<p> {{$message}} </p>@enderror
+         
+         <div class="input-contenedor">
+         <input placeholder="Contraseña" class="input-text" type="password" name="contraseña" value="{{old('contraseña')}}">
+         </div>
+
+         @error('contraseña')<p> {{$message}} </p>@enderror
+
+         @if (session('mensaje'))
+         <div class="">
+            <p style="color: red"> {{session('mensaje')}} </p>
+         </div>
+         @endif
 
          <button class="button"  type="submit">Login</button>
          <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>

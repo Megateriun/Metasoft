@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('layouts.home_layout')
 
 @section('title', 'Perfil')
 
@@ -21,8 +21,6 @@
             <table id="objetos" class="table table-striped">
                 <thead>
                     <tr>
-                        <th>#</th>
-
                         <th>Estado</th>
                         <th>Acticcion</th>
                         <th>Nombre</th>
@@ -36,16 +34,23 @@
                 <tbody>
                     @foreach ($objects as $object)
                     <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-
                         <td>{{$object->innerjoin_state->object_state}}</td>
                         <td>{{$object->innerjoin_action->action}}</td>
                         <td>{{$object->name_object}}</td>
-                        <td>{{$object->image}}</td>
+                        <td><img style="width: 100px" src="{{ asset('img/defaull/object.svg') }}" alt=""></td>
                         <td>{{$object->description}}</td>
                         <td>
-                            <button>Editar</button>
-                            <button>Eliminar</button>
+                            <form action="{{ route('edit.object',$object) }}" method="post">
+                                @csrf
+                                <button>Editar</button>
+                            </form>
+
+                            <form action="{{ route('delete.button',$object) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button>Eliminar</button>
+                            </form>
+        
                         </td>
 
                     </tr>
@@ -64,7 +69,6 @@
 @endsection
 
 @section('script')
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>

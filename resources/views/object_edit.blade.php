@@ -1,6 +1,6 @@
 @extends('layouts.home_layout')
 
-@section('title', 'Crear Objeto')
+@section('title', 'Editar Objeto')
 
 @section('css')
 <link href="{{ asset('css/object_create.css') }}" rel="stylesheet" type="text/css">
@@ -14,22 +14,22 @@
 @section('content')
 
 <div class="contenedor">
-    <form class="formulario" action="{{route('object.save')}}" method="POST">   <!-- al colocar POST en el metodo apunta a la url de /form que tenga el metodo post -->
+    <form class="formulario" action="{{route('edit.button',$object)}}" method="POST">   <!-- al colocar POST en el metodo apunta a la url de /form que tenga el metodo post -->
 
        @csrf <!-- esto es un toque(lo hace laravel para que terceros no ingresen a los formularios) que solucita laravel para enviar el formulario por el metodo post  -->
-
-    <h1>Crear Objeto</h1>
+       @method('put')
+    <h1>Editar Objeto</h1>
 
 
         <div class="input-contenedor">
-        <input class="input-text" type="text" placeholder="Nombre del objeto" name="name_object">   
+        <input class="input-text" type="text" value="{{$object->name_object}}" placeholder="Nombre del objeto" name="name_object">   
         </div>
 
         @error('name_object')<p> {{$message}} </p>@enderror
 
         <div class="input-contenedor">  
             <select  class="input-select"  name="action">
-                <option label="Acción" value="" disabled selected></option>
+                <option disabled value="{{$object->action}}" selected>{{$object->innerjoin_action->action}}</option>
                 @foreach ($actions as $action)
                 <option value="{{$action->id}}">{{$action->action}}</option>
                 @endforeach
@@ -39,16 +39,16 @@
         @error('action')<p> {{$message}} </p>@enderror
 
         <div class="input-contenedor">      
-        <input class="input-text" type="text" placeholder="Descricción" name="description">        
+        <input class="input-text" type="text" value="{{$object->description}}" placeholder="Descricción" name="description">        
         </div>
 
         @error('description')<p> {{$message}} </p>@enderror
 
         <div class="input-contenedor">      
-        <input class="input-text" value="null" type="text" placeholder="Imagen" name="image">        
+        <input class="input-text" value="null" type="text" value="{{$object->image}}" placeholder="Imagen" name="image">        
         </div>
 
-        <button class="button" type="submit" >Crear</button>
+        <button class="button" type="submit" >Editar</button>
 
     </form>
 </div>

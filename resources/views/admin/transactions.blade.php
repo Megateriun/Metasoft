@@ -1,11 +1,13 @@
-@extends('layouts.home_layout')
+@extends('layouts.admin_home_layout')
 
-@section('title', 'Perfil')
+@section('title', 'Transacciones')
 
 @section('css')
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap4.min.css">
+
 @endsection
 
 @section('name_user')
@@ -14,7 +16,7 @@
 
 @section('content')
 
-<h1>Lista de objetos Adquiridos</h1>
+<h1>Lista de TRANSACCIONES</h1>
 
     <div class="card">
         <div class="card-body">
@@ -26,6 +28,7 @@
                         <th>Nombre objeto</th>
                         <th>Imagen</th>
                         <th>Descripción</th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
                
@@ -37,6 +40,14 @@
                         <td>{{$objects->find($transaction->object_users)->name_object}}</td>
                         <td><img style="width: 100px" src="{{ asset('img/defaull/object.svg') }}" alt=""></td>
                         <td>{{$objects->find($transaction->object_users)->description}}</td>
+                        <td>
+                            <!---->
+                            <form  method="post">
+                                @csrf
+                                @method('put')
+                                <button>Editar</button>
+                            </form>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -82,7 +82,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es', // aqui se cambian los mensajes de ingles(en) a español(es)
 
     /*
     |--------------------------------------------------------------------------

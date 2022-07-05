@@ -20,6 +20,7 @@ class TransactionFactory extends Factory
     public function definition()
     {
 
+
         $owner = $this->faker->numberBetween(1, 10); // se debe de tener en cuenta la cantidad de usuarios y los objetos que se quiera crear
         $client = $this->faker->numberBetween(1, 10); // se debe hacer una comparación para estos dos campos
         $state = $this->faker->randomElement([1, 2, 3]);
