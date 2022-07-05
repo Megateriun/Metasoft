@@ -1,3 +1,109 @@
+## Program download links
+
+
+For phpMyAdmin implementation
+
+Xampp:
+https://www.apachefriends.org/es/download.html
+
+Laravel:
+- Composer
+https://getcomposer.org/download/
+
+- Laravel Documentation:
+https://laravel.com/docs/9.x/installation#installation-via-composer
+
+NOTE: Install the environment variable
+
+Node.js:
+https://nodejs.org/es/
+
+Git:
+https://git-scm.com/download/win
+
+## Configuration for the project
+
+Install laravel:
+```bash
+composer global require laravel/installer
+```
+Project creation:
+```bash
+laravel new Metasoft
+```
+Install the library to use bootstrap:
+```bash
+composer require laravel/ui
+```
+
+Run server:
+```bash
+php artisan serve
+```
+Create a file to migrate to MySql:
+```bash
+php artisan make:migration Nombre_tabla
+```
+To run the created migrations:
+```bash
+php artisan migrate
+```
+Create a controller:
+```bash
+php artisan make:controller HomeController
+```
+
+VSCODE HARD RESET:
+```bash
+%userprofile%\AppData\Roaming\Code
+NOTA: borrar todo
+```
+VSCODE EXTENSIONS:
+```bash
+%userprofile%\.vscode
+```
+Clear database:
+```bash
+DROP DATABASE IF EXISTS Metasoft;
+```
+```bash
+php artisan make:migration create_users_roles_table
+php artisan make:migration create_objects_states_table
+php artisan make:migration create_transactions_states_table
+php artisan make:migration create_actions_table
+php artisan make:migration create_users_table
+php artisan make:migration create_objects_users_table
+php artisan make:migration create_transactions_table
+php artisan migrate
+php artisan migrate:rollback
+```
+For data update:
+```bash
+php artisan make:model Users_role
+php artisan make:model Objects_state
+php artisan make:model Transactions_state
+php artisan make:model Action
+php artisan make:model User
+php artisan make:model Objects_user
+php artisan make:model Transaction
+
+php artisan make:seeder Users_role_Seeder
+php artisan make:seeder Objects_state_Seeder
+php artisan make:seeder Transactions_state_Seeder
+php artisan make:seeder Action_Seeder
+
+php artisan make:seeder User_Seeder
+
+php artisan db:seed
+```
+Delete all, create the tables and add the seeds:
+```bash
+php artisan migrate:fresh --seed
+
+php artisan make:factory UserFactory --model=User
+php artisan make:factory Objects_userFactory --model=Objects_user
+php artisan make:factory TransactionFactory --model=Transaction
+```
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
